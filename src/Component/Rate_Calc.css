@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(232, 240, 240);
+    margin: 0px;
+    padding: 0px;
+}
+
+span{
+    font-weight: 200;
+}
+
+.calculator_bestapp{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.calculator_header{
+    justify-content: center;
+    align-items: center;
+    background: rgb(88, 164, 250); 
+}
+
+.calculator_header h1{
+    text-align: center;
+    font-size: 44px;
+    color: white; 
+    padding: 10px;
+    
+}
+
+.input_label{
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input_label h2{
+    font-size: 32px;
+}
+
+input{
+    width: 500px;
+    height: 50px;
+    border: 3px black solid;
+    margin-top: 30px;
+    position: relative;
+    margin-left: 420px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.input_button{
+    
+}
+
+button{
+    align-items: center;
+    text-align: center;
+    width: 240px;
+    height: 50px;
+    margin-left: 565px;
+    margin-top: 20px;
+}
+
+.calculator_result{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 30px;
+    border: 3px black solid;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.calculator_flex1{
+    padding: 10px;
+   
+    
+}
+
+h3{
+    margin-top: 10px;
+}
+
+.calculator_flex2{
+    padding: 10px;
+}
+
+.calculator_flex3{
+    padding: 10px;
+}
+
+.calculator_flex4{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1000px){
+   body{
+       position: relative;
+   }
+
+    input{
+       width: auto;
+       margin-left: 40px;
+   }
+
+   button{
+       margin-left: 70px;
+   }
+}
