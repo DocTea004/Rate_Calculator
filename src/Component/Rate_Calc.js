@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import "./Rate_Calc.css"
 
 const Dollars = [
@@ -96,26 +96,27 @@ const Rate_Calc = () => {
         setVolvoCTotal(Volvo_C)
     }
 
+    //const Compare_value = Math.max(ToyotaBTotal,FordDTotal,VolvoCTotal);
 
     const Comparism=()=>{
 
-        if((ToyotaB_calc > VolvoC_calc)  && (ToyotaB_calc > FordD_calc)){
-            setBestApp("Toyota")
+        const Compare_value = Math.max(ToyotaBTotal,FordDTotal,VolvoCTotal);
+
+        if(ToyotaBTotal === Compare_value){
+            setBestApp("Toyota");
         }
 
-        else if((VolvoC_calc > ToyotaB_calc) && (VolvoC_calc > FordD_calc)){
-            setBestApp("Volvo");
-        }
-
-        else if((FordD_calc > ToyotaB_calc) && (FordD_calc > VolvoC_calc)){
-            setBestApp("Ford")
+        else if(FordDTotal === Compare_value) {
+            setBestApp("Ford");
+            
         }
 
         else{
-            setBestApp("Yet to Compare the best App")
-        }
-    }
 
+            setBestApp("Volvo");
+        }
+             
+    }
 
     return (
         <div className="calculator">
@@ -233,7 +234,7 @@ const Rate_Calc = () => {
            <div className="calculator_bestapp">
                
                <h3>
-               <span>The best App is </span> {bestApp}
+                   {bestApp}
                </h3>
            </div>
         </div>
